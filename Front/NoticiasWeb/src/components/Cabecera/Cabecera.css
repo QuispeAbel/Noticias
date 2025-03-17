@@ -1,0 +1,28 @@
+.cabecera {
+    background-color: #242b3a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.5em;
+    font-weight: bold;
+    border-bottom: 1px solid #3d616b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+    
+}
+
+.botonera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    gap: 10px;
+}

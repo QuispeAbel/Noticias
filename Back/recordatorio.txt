@@ -1,0 +1,6 @@
+- EL htacces hace que hay un unico punto de acceso (index.php)
+sin importar la url.
+
+- Cree mi propio dominio para que el dispatch retorne solo 
+la uri a la que quiero acceder (ej: /contact),
+a traves de el archivo.

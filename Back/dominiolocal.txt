@@ -1,0 +1,10 @@
+Definir un nuevo dominio:
+- Abrir bloq de notas admin.
+- Archivo->Abrir->C:\Windows\System32\drivers\etc
+- Abrir hosts
+- ingresar nv dom
+IMPORTANTE DARLE .test
+
+Decirle a Apache cual abrir:
+- Ir a xampp/apache/conf/extra/
+- Abrir host.conf
