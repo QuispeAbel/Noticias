@@ -1,13 +1,22 @@
-.noticia-miniatura{
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #e0e0e0;
-    max-width: 18rem;
+.custom-card {
+    padding: 0; /* Elimina el padding predeterminado de la tarjeta */
+    border-radius: 0; /* Opcional: elimina el redondeo de los bordes de la tarjeta */
+    overflow: hidden; /* Asegura que la imagen no sobresalga de la tarjeta */
 }
 
 .news-img {
     width: 100%;
-    height: 150px; /* valor por defecto */
-    object-fit: cover;
+    height: 180px;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    border-top-left-radius: 0; /* Elimina el redondeo del borde superior izquierdo */
+    border-top-right-radius: 0; /* Elimina el redondeo del borde superior derecho */
+}
 
-  }
+.card-body-custom {
+    padding: 1rem; /* Añade padding solo al cuerpo de la tarjeta */
+}
+
+.fecha{
+    font-size: 0.8rem;
+    text-align: end;
+}

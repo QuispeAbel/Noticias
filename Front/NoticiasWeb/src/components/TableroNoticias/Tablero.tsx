@@ -1,11 +1,12 @@
 import { useFetch } from "../../hooks"
 import "./Tablero.css"
 import { NoticiaMiniatura } from "../NoticiaMiniatura/NoticiaMiniatura"
-
-const url = 'http://noticias.test/noticias'
+import { useState } from "react"
 
 export const Tablero = () => {
 
+  const [categoria, setCategoria] = useState('')
+  const [url, setUrl] = useState(`http://noticias.test/noticias${categoria}`)
   const { data, loading, error } = useFetch(url)
 
   const handleNoticias = (data: unknown) => {

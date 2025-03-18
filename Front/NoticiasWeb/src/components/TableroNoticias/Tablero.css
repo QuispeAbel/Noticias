@@ -1,4 +1,5 @@
 .tablero {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
     gap: 16px; /* Espacio entre los elementos */
