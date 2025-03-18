@@ -1,4 +1,6 @@
 import './NoticiaMiniatura.css'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 interface Params {
     titulo: string;
@@ -10,10 +12,15 @@ interface Params {
 export const NoticiaMiniatura = ({titulo, copete, imagen, fecha}: Params) => {
 
     return (
-        <div className="noticia-miniatura">
-           <h3>{titulo}</h3>
-              <p>{copete}</p>
-                <img className='news-img' src={`/imagenes/${imagen}`}/>
-                <p>{fecha}</p>
-        </div>)
+        <Card className='noticia-miniatura' >
+          <Card.Img variant="top" src={`/imagenes/${imagen}`} className="news-img " />
+          <Card.Body>
+            <Card.Title>{titulo}</Card.Title>
+            <Card.Text>
+              {copete}
+            </Card.Text>
+            <Button variant="primary">Ver Noticia Completa</Button>
+          </Card.Body>
+        </Card>
+      );
 }
