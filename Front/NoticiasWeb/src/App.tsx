@@ -8,8 +8,8 @@ function App() {
   const [url, setUrl] = useState(`http://noticias.test/noticias`)
   const { data, loading, error } = useFetch(url)
 
-  const handleCategoria = () => {
-    setUrl(`http://noticias.test/noticiaId/1`)
+  const handleCategoria = (categoria:string) => {
+    setUrl(`http://noticias.test/noticias/${categoria}`)
   }
 
   return (

@@ -10,9 +10,15 @@ interface Parameters {
 export const Tablero = ({ loading, error, data}: Parameters) => {
 
   const handleNoticias = (data: unknown) => {
+  
     if (Array.isArray(data) ) {
+
+      if (data.length === 0) {
+        return <h1>No hay noticias para mostrar</h1>
+      }
+
       return data.map((element) => (
-        <NoticiaMiniatura
+        <NoticiaMiniatura key={element.id_noticia}
           titulo={element.titulo}
           copete={element.copete}
           imagen={element.imagen}

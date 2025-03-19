@@ -7,14 +7,36 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 interface Parameters {
-  parentMethod: () => void;
+  parentMethod: (categoria: string) => void;
 }
 
-export const Cabecera = ({parentMethod}:Parameters) => {
+export const Cabecera = ({ parentMethod }: Parameters) => {
+
+  const handleCiencia = () => {
+    parentMethod('CIENCIA')
+  }
+
+  const handleOtros = () => {
+    parentMethod('OTROS')
+  }
+
+  const handleDeportes = () => {
+    parentMethod('DEPORTES')
+  }
+
+  const handleEfemerides = () => {
+    parentMethod('EFEMERIDES')
+  }
+
+  const handleHome = () => {
+    parentMethod('')
+  }
+
+
   return (
     <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">Noticias</Navbar.Brand>
+        <Navbar.Brand>Noticias</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -22,13 +44,13 @@ export const Cabecera = ({parentMethod}:Parameters) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link onClick={handleHome}>Home</Nav.Link>
             <NavDropdown title="Categorías" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3" onClick={parentMethod}>Ciencia</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Efemerides</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Deportes</NavDropdown.Item>
+              <NavDropdown.Item  onClick={handleCiencia}>Ciencia</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleEfemerides}>Efemerides</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleDeportes}>Deportes</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">Otros</NavDropdown.Item>
+              <NavDropdown.Item  onClick={handleOtros}>Otros</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
