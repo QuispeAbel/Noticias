@@ -15,7 +15,7 @@ export const NoticiaMiniatura = ({titulo, copete, imagen, fecha}: Params) => {
     <Card className="custom-card" style={{ width: '18rem' }}>
         <Card.Img variant="top" src={`/imagenes/${imagen}`} className="news-img" />
         <Card.Body className="card-body-custom">
-            <Card.Title>{titulo}</Card.Title>
+            <Card.Title className='titulo'>{titulo}</Card.Title>
             <Card.Text>
                 {copete}
             </Card.Text>

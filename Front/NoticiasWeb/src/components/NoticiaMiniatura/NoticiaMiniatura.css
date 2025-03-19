@@ -13,10 +13,19 @@
 }
 
 .card-body-custom {
-    padding: 1rem; /* Añade padding solo al cuerpo de la tarjeta */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los elementos en una columna */
+    
 }
 
 .fecha{
     font-size: 0.8rem;
-    text-align: end;
+    text-align:end;
+    margin-top: auto;
+}
+
+.titulo{
+    white-space: nowrap; /* Evita que el texto se desborde */
+    overflow: hidden; /* Evita que el texto se desborde */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto */
 }

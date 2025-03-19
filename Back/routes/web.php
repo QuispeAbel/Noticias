@@ -9,6 +9,8 @@ Route::get('/',[ HomeController::class, 'index']
 
 Route::get('/noticias', [ Noticias::class, 'all']);
 
+Route::get('/noticias/:categoria', [ Noticias::class, 'findCategory']);
+
 Route::get('/noticiasultima', [ Noticias::class, 'last']);
 
 Route::get('/noticiaId/:id', [ Noticias::class, 'find']);
