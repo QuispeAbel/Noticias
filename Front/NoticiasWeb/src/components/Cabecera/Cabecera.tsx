@@ -6,8 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+interface Parameters {
+  parentMethod: () => void;
+}
 
-export const Cabecera = () => {
+export const Cabecera = ({parentMethod}:Parameters) => {
   return (
     <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
       <Container fluid>
@@ -21,7 +24,7 @@ export const Cabecera = () => {
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <NavDropdown title="Categorías" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Ciencia</NavDropdown.Item>
+              <NavDropdown.Item href="#action3" onClick={parentMethod}>Ciencia</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Efemerides</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Deportes</NavDropdown.Item>
               <NavDropdown.Divider />
